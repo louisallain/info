@@ -1,0 +1,115 @@
+package datastruct;
+
+import java.util.Iterator;
+
+public class BinaryTreeTable <E extends Comparable, T> implements Table<E,T> {
+	
+		private Node root;
+		public BinaryTreeTable() {
+			
+			//construction d'un arbre vide
+			this.root = new Node(root, root, root, null, null);
+	
+		}
+		
+		@Override
+		public String toString() {
+			return null;
+		}
+	
+		@Override
+		public T select(E key) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	
+		@Override
+		public boolean insert(E key, T data) {
+
+			
+			
+			return false;
+		}
+	
+		@Override
+		public boolean delete(E key) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		
+		
+		
+		
+		
+		private class Node {
+			
+			Node lSon ;			// fils gauche (null si pas de fils gauche)
+			Node rSon ;			// fils droit (null si pas de fils droit)
+			Node father ;		// père (null si le nœud est root)
+			T theValue ;		// donnée stockée
+			E key;				// clé unique
+			Node(Node leftSon, Node rightSon, Node thefather, T Value, E theKey) {
+				
+				lSon = leftSon;
+				rSon = rightSon;
+				father = thefather;
+				theValue = Value;
+				key = theKey;		
+				
+			}
+			
+
+			
+			private Node getLeftSon(){
+				return lSon;
+				
+			}
+			private Node getRightSon(){
+				return rSon;
+				
+			}			
+			private Node getFather(){
+				return father;
+				
+			}			
+			private T getValue(){
+				return theValue;
+				
+			}			
+			private E getKey(){
+				return key;
+				
+			}
+			
+			private void setLeftSon(Node newLeftSon){
+				lSon = newLeftSon;
+			}
+			private void setRightSon(Node newRigthSon){
+				rSon = newRigthSon;
+
+			}
+			private void setFather(Node newFather){
+				father = newFather;
+
+			}
+			private void setTheValue(T newValue){
+				theValue = newValue;
+
+			}
+		}
+		private Node seekFather ( E key ){
+			Node chemin = root;
+			boolean find = false;
+			while(chemin.lSon == null || chemin.rSon == null || find == false){
+				
+				if(){
+					
+				}
+				
+			}
+			
+			return null;
+			
+		}
+
+}
